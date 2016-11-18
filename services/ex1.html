@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Angular JS Services</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+	<!-- Services provide an easy way for us to share data and functionality throughout our app. The services we create are singletons that can be injected into controllers and other services, making them the ideal place for writing reusable code. -->
+	<div ng-app="app">
+		<h1>Services</h1>
+
+		<div ng-controller="ListCtrl as list">
+			<!-- The ng-repeat directive iterates over collections within our view, repeating the contents within the element where ng-repeat is used. Since our list of messages is currently empty, let's create another controller to help us populate the list. -->
+			<p ng-repeat="message in list.messages">{{ message.id }}: {{ message.text }}</p>
+		</div>
+		<div ng-controller="PostCtrl as post">
+			<form ng-submit="post.addMessage(post.newMessage)">
+				<input type="text" ng-model="post.newMessage">
+				<button type="submit">Add Message</button>
+			</form>
+		</div>
+	</div>
+	
+</body>
+</html>

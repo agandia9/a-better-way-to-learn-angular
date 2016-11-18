@@ -1,0 +1,25 @@
+
+<!-- Here we used the ng-init directive to initialize message with a value of hello. ng-init is a directive that evaluates the given expression once when the element is initialized. Note that ng-init shouldn't be used regularly, as you should be initializing your variables in your controllers (which we'll go over how to do in a different lesson). We're using a one-time binding in the third paragraph, which made it so once the value in message was compared to hello, that specific expression stopped listening for changes to message, leaving the value of true to stay in that paragraph regardless of what we put into our text input. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Angular JS Binding</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js"></script>
+</head>
+<body>
+	<!-- The ng-app directive defines where in our page an Angular application is running. There are a few different ways to bind data within Angular. Before we can go over those, we'll need setup a model for us to read data from. -->
+	<div ng-app>
+		<h1>Binding {{message}}</h1>
+		<!-- ng-model is a directive in AngularJS that binds a variable from an input field to a scope variable. -->
+		<input type="text" ng-model="message">
+		<p>{{message}}</p>
+		<p>{{message + message}}</p>
+		<!-- The final way to bind data is one-time binding. As the name suggests, this means the data is only read once from the source, then the data between the source and the view are no longer synchronized. This will come in handy as your application grows as it is a much less resource intensive way of displaying static data or data that only needs to be read once. We can express this by prefixing our variables with :: -->
+		<png-bind="::message === 'hello'"></p>
+		<p>{{1+2}}</p>
+		<!-- Another way to use binding in Angular applications is to use the ng-bind directive. As applications get bigger and take longer to render, it's possible that we can see curly brackets in our browser for a split second while Angular is still compiling our templates. We can avoid this flashing behavior by using ng-bind instead of curly brackets. -->
+		<p ng-bind>"1 + 3"</p>
+	</div>
+</body>
+</html>

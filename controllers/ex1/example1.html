@@ -1,0 +1,25 @@
+<!-- The role of controllers in Angular is to expose data to our view via $scope, and to add functions to $scope that contain business logic to enhance view behavior. Presentation logic should remain within views and directives. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Angular JS Controllers</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+	<div ng-app="app">
+		<h1>Controllers</h1>
+		<div ng-controller="MainCtrl">
+			<p>{{message}}</p>
+			<!-- The ng-submit directive that we used in our form tag contains an Angular expression that gets executed when the form gets submitted. When we type a message into our form and hit enter or the Update Mesage button, we can see the original message above the form get updated with the text from the input. -->
+			<form ng-submit="updateMessage(newMessage)">
+				<input type="text" ng-model="newMessage">
+				<button type="submit">Update Message</button>
+			</form>
+		</div>
+	</div>
+	
+
+</body>
+</html>
