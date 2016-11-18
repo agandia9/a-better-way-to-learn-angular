@@ -10,5 +10,5 @@
 7. <a href="/promises/ex3/ex3.html"> Promises - 3 - </a>
 8. <a href="/promises/ex4/ex4.html"> Promises - 4 - </a>
 9. <a href="/promises/ex5/ex5.html"> Promises - 5 - </a>
-10.<a href="/filters/ex1/ex1.html"> Filters - 1 - </a>
+10. <a href="/filters/ex1/ex1.html"> Filters - 1 - </a>
 11. ... 🛠 🔧
