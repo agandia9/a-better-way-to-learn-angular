@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Directives-Taking-Controllers</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</head>
+<body ng-app="coolApp" ng-controller="FunCtrl as fun">
+	<div entering="fun.start()">Hover me !!! 👇🏼</div>
+	<div entering="fun.end()"> Hover me too !!! 👇🏼</div>
+</body>
+</html>
